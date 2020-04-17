@@ -28,7 +28,6 @@
         android:id="@+id/work"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-            android:text="woek"
             android:layout_marginBottom="8dp"
             android:textSize="20sp"
             android:gravity="center"
@@ -38,9 +37,8 @@
             android:id="@+id/due_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="due"
             android:textSize="15sp"
-            android:gravity="left"
+            android:gravity="start"
             android:fontFamily="casual">
         </TextView>
         </LinearLayout>

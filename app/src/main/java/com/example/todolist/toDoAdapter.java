@@ -4,24 +4,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.ArrayList;
 import java.util.List;
 
 class toDoAdapter extends RecyclerView.Adapter<toDoAdapter.ViewHolder>{
-
-
     private List<ToDo> work;
     public toDoAdapter(List<ToDo> work) {
         this.work = work;
     }
-
-
-
-
     @NonNull
     @Override
     public toDoAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -32,10 +23,7 @@ class toDoAdapter extends RecyclerView.Adapter<toDoAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull toDoAdapter.ViewHolder holder, int position) {
         holder.work.setText(work.get(position).getWork());
-        holder.due.setText("Due:\t"+work.get(position).getDueDate());
-
-    }
-
+        holder.due.setText("Due:\t"+work.get(position).getDueDate()); }
     @Override
     public int getItemCount() {
         return work.size();

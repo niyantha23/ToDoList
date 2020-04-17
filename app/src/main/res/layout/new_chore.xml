@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="What Do You Want To Remember??"
+        android:text="@string/what_do_you_want_to_remember"
         android:textStyle="bold"
         android:gravity="center"
         android:textSize="18sp"
@@ -28,7 +28,7 @@
         android:id="@+id/work"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="Work To Do"
+        android:hint="@string/work_to_do"
         android:layout_margin="10dp"
         >
 
@@ -42,7 +42,7 @@
             android:id="@+id/due_date"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Due Date"
+            android:hint="@string/due_date"
             android:layout_margin="10dp">
 
         </com.google.android.material.textfield.TextInputEditText>
