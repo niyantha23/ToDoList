@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 import android.view.View;
 import android.view.Menu;
@@ -22,20 +23,20 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton add;
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
-    ArrayList<ToDo> work;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        work=new ArrayList<ToDo>();
-        for (int i = 0; i < 10; i++) {
-            ToDo toDo=new ToDo("Take doggo for walk","Today");
-            work.add(toDo);
-        }
-
-         recyclerView=findViewById(R.id.recycler_view);
+        recyclerView=findViewById(R.id.recycler_view);
          add = findViewById(R.id.fab);
          recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        AppDataBase dB= Room.databaseBuilder(getApplicationContext(),AppDataBase.class,"Production")
+                .allowMainThreadQueries()
+                .build();
+
+        List<ToDo> work=dB.workDao().getToDo();
          adapter=new toDoAdapter(work);
          recyclerView.setAdapter(adapter);
         add.setOnClickListener(new View.OnClickListener() {

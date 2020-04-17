@@ -14,8 +14,8 @@ import java.util.List;
 class toDoAdapter extends RecyclerView.Adapter<toDoAdapter.ViewHolder>{
 
 
-    private ArrayList<ToDo> work;
-    public toDoAdapter(ArrayList<ToDo> work) {
+    private List<ToDo> work;
+    public toDoAdapter(List<ToDo> work) {
         this.work = work;
     }
 

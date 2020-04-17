@@ -1,8 +1,18 @@
 package com.example.todolist;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class ToDo {
+
+
+    @PrimaryKey(autoGenerate = true)
     private int Id;
+    @ColumnInfo(name = "work")
     private String work;
+    @ColumnInfo(name = "due_date")
     private String dueDate;
 
     public ToDo(String work, String dueDate) {
