@@ -1,0 +1,28 @@
+package com.example.todolist;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+public class NewChoreActivity extends AppCompatActivity {
+    EditText work,dueDate;
+    FloatingActionButton newWorkAddButton;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.new_chore);
+        work=findViewById(R.id.work);
+        dueDate=findViewById(R.id.due_date);
+        newWorkAddButton=findViewById(R.id.floatingActionButton);
+        newWorkAddButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+    }
+    }

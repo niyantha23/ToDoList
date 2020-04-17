@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_margin="5dp">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="2dp"
+        app:strokeColor="#72609F"
+        app:cardCornerRadius="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_gravity="center">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </CheckBox>
+
+        <TextView
+        android:id="@+id/work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:text="woek"
+            android:layout_marginBottom="8dp"
+            android:textSize="20sp"
+            android:gravity="center">
+        </TextView>
+        <TextView
+            android:id="@+id/due_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="due"
+            android:textSize="15sp"
+            android:gravity="left">
+        </TextView>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
