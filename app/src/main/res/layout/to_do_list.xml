@@ -19,10 +19,12 @@
             android:padding="5dp"
             android:layout_gravity="center">
             <CheckBox
+                android:id="@+id/checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:shadowColor="@color/colorAccent">
             </CheckBox>
+
 
         <TextView
         android:id="@+id/work"
@@ -41,6 +43,12 @@
             android:gravity="start"
             android:fontFamily="casual">
         </TextView>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/delete"
+                android:layout_gravity="end"></ImageButton>
+
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>

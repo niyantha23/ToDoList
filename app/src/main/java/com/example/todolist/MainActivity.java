@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 import android.view.View;
+import android.widget.CheckBox;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,5 +34,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,NewChoreActivity.class));
                             }
         });
+
     }
 }
